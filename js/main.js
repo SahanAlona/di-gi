@@ -20,6 +20,12 @@ $(function () {
                     arrows: false,
                 },
             },
+            {
+                breakpoint: 320,
+                settings: {
+                    arrows: false,
+                },
+            },
         ],
     });
 
@@ -37,9 +43,7 @@ $(function () {
 
             {
                 breakpoint: 640,
-                settings: {
-                    arrows: false,
-                },
+                settings: {},
             },
         ],
     });
@@ -54,4 +58,13 @@ let msnry = new Masonry(elem, {
     horizontalOrder: true,
     fitWidth: true,
     gutter: 30,
+});
+
+// preloader
+let mask = document.querySelector('.mask');
+window.addEventListener('load', () => {
+    mask.classList.add('hide');
+    setTimeout(() => {
+        mask.remove();
+    }, 600);
 });

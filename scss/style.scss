@@ -1,5 +1,6 @@
 @import 'vars';
 @import 'global';
+@import 'preloader';
 
 .header {
     background-color: $accent;
@@ -78,6 +79,9 @@
         color: #fff;
         text-align: center;
     }
+    &__btn {
+        display: none;
+    }
     &__title {
         @extend %robotocondensed-400;
         line-height: 28px;
@@ -86,7 +90,6 @@
         padding: 36px 0 28px;
         max-width: 243px;
         margin: 0 auto;
-
         position: relative;
         &::after {
             content: '';
@@ -104,9 +107,10 @@
         display: none;
         @extend %robotocondensed-400;
     }
-    &__btn {
+    .slick-arrow {
         display: none;
     }
+
     .slick-dots {
         display: flex;
         justify-content: center;
@@ -159,6 +163,7 @@
             bottom: 50px;
         }
         .slick-arrow {
+            display: block;
             width: 56px;
             height: 56px;
             border: none;
@@ -851,7 +856,7 @@
         height: 30px;
         left: 0;
         right: 0;
-        bottom: calc(50% - 15px);
+        bottom: 50%;
         margin: 0 auto;
         z-index: 10;
     }
